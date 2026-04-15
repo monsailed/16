@@ -1,0 +1,55 @@
+
+const hero = {
+  name: "Артур",
+  health: 100,
+  inventory: ["Карта", "Факел"]
+};
+
+
+const addToInventory = (item) => hero.inventory.push(item);
+
+const checkStatus = () => {
+    return hero.health > 0 ? "Герой жив!" : "Герой пал...";
+}
+
+
+const useItem = function(itemName) {
+    switch (itemName) {
+        case "Зелье":
+            console.log("Здоровье восстановлено!");
+            break;
+        case "Факел":
+            console.log("Стало светлее");
+            break;
+        default:
+            console.log("Предмет не распознан");
+    }
+}
+
+const showInventory = () => {
+    hero.inventory.forEach((item) => {
+        console.log("В рюкзаке: " + item);
+    })
+}
+
+const goldPouches = [10, 25, 50]; 
+
+
+const magicGold = goldPouches.map((money) => money * 3);
+
+console.log("=== СТАТУС ===");
+console.log(checkStatus());
+
+console.log("\n=== ИНВЕНТАРЬ ===");
+addToInventory("Меч");
+addToInventory("Зелье");
+showInventory();
+
+console.log("\n=== ДЕЙСТВИЯ ===");
+useItem("Факел");
+useItem("Зелье");
+useItem("Камень");
+
+console.log("\n=== ЗОЛОТО ===");
+console.log("Обычное золото:", goldPouches);
+console.log("Магическое золото:", magicGold);
