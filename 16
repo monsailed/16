@@ -1,6 +1,11 @@
-1. const inventory = ["Меч", "Щит", "Зелье"];
+const numbers = [150, 400, 999];
 
 // Ваш код здесь
 
-inventory.forEach((equip) => console.log("Экипирован предмет: " + equip))
-// в консоле будет: Экипирован предмет: Меч Экипирован предмет: Щит Экипирован предмет: Зелье
+const translation = numbers.map((number) => {
+
+    number + ".руб";
+
+})
+
+console.log(translation);не понял
