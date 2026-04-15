@@ -1,0 +1,9 @@
+ const emails = ["test@mail.ru", "hello@gmail.com", "admin@site.com"];
+
+// Ваш код здесь
+
+emails.forEach((email) => {
+
+    console.log("Отправка письма на: ", email)
+
+})
